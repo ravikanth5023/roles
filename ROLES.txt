@@ -1,0 +1,40 @@
+1.this is java base application and developers simply check in the code into the git repository
+2.as a devops engineer one of my core responsibilty is to setup the ci/cd pipelines fo which i am using jenkins
+3.so my responsibilty is to design the groovy script jenkins files for trigerring all stages of ci/cd.
+4.we receive notifications directly via webhook which i have configured and once jenkins receives notifications
+jenkins actucally download the code build the code with the help of maven where in the artifacts gets created
+5.then i have configured jenkins to deploy this artifacts into the testing servers,we have a team of testers to
+create automation testing programs with tools like selenium.
+6.i have configured my jenkins to download this selenium programs and execute them so that i can perform testing
+and once the testing is successful the next stage jenkins would deploy it to the preprod environment.
+7.where it actually taken approvals from the concerned team and there it again executes some UAT scripts which are created by
+the testers
+8.this is the common flow of ci/cd which we have implemented.
+9.our sprint duration is some where between 2-4 weeks and its my responsibilty to design these groovy sripts
+files for every releases that is happening during sprint activities
+10.Apart from these though our sprint duration is approximatetly 4 weeks we also have sub-sprints which are 
+as small a 2 days or 3 days or something like that and this sub sprints would be related to bug fixing and 
+enhancemnets
+11.and for this sub-sprints also minor releases happen so its my responsibilty to create corresponding jenkins
+files and see that the neccassary ci/cd flow happens
+12.apart from this we also have lot of other scenarious where we run parallel multiple jenkins jobs and to ensure
+that the jenkins master does not go down what we have done is we have created additional slave machines and
+distributed workload to these slave machines
+13.the branching stratagy that our devolopers actually use is for every functionality they create a seprate
+feature branch we also have main branch which is called a release branch
+14.Indivdual functionality code devlopers put on the feature brach and once the code is fully created it is
+merged to the release branch
+15.we also have something called as hotfix branch where all the bug fixing and all those things are done
+16.Because we have a lot of multiple branches for each and every feature i have actually designed a multi pipeline branch
+17.wherein we created a multiple jenkins files for each and every branch and to ensure that the same code is 
+reused in these jenkins files for mutiple times
+18.i have configured shared libraries where we have created customised reusable functions which we are called in 
+my pipeline programs and ci/cd flow is performed.
+19.apart from these we use docker to a huge extension in our orginazation and as i told you earlier this is a java
+base application where our databases are running on oracle and our application servers are running on tomcat
+20.now this entire dev environment i have setup in a form of docker container for which i have created the docker composer files,
+similarly i was responsible for converting legacy applications into the docker based applications and my core responsiblity over
+here is to design the docker files for that.
+21.so i create docker files so that i understand the existing architecture and based on that i design the docker files create 
+customised images and these images i am uploading in the docker private registry a ECR registry which we have actually setup.  
+ 
